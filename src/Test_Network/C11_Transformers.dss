@@ -1,0 +1,13 @@
+!new reactor.C11_hvmv_sub_hsb  bus1=MasterNode_C11  bus2=C11_hvmv_sub_hsb  r=0  x=(1.051 0.88 0.001 3 * - - 115 12.47 / sqr *) normamps=400  emergamps=400
+new transformer.C11_hvmv_sub  phases=3  windings=2  buses=(MasterNode_C11, C11_regxfmr_hvmv_sub_lsb.1.2.3.0)
+~ conns=(delta wye)
+~ kvs=(115, 12.47)  kvas=(27500, 27500)
+~ xhl=15.51  sub=y  subname=C11_hvmv_sub
+~ wdg=1  %r=0.67202
+~ wdg=2  %r=0.67202
+new transformer.C11_feeder_rega phases=1  windings=2  buses=(C11_regxfmr_hvmv_sub_lsb.1, C11__hvmv_sub_lsb.1)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(27500, 27500)  xhl=0.1 %loadloss=.001 wdg=2 maxtap=1.1 mintap=0.9 ppm=0
+new transformer.C11_feeder_regb phases=1  windings=2  buses=(C11_regxfmr_hvmv_sub_lsb.2, C11__hvmv_sub_lsb.2)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(27500, 27500)  xhl=0.1 %loadloss=.001 wdg=2 maxtap=1.1 mintap=0.9 ppm=0
+new transformer.C11_feeder_regc phases=1  windings=2  buses=(C11_regxfmr_hvmv_sub_lsb.3, C11__hvmv_sub_lsb.3)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(27500, 27500)  xhl=0.1 %loadloss=.001 wdg=2 maxtap=1.1 mintap=0.9 ppm=0
+new regcontrol.C11_feeder_rega transformer=C11_feeder_rega  winding=2 vreg=126.5  ptratio=60 band=2
+new regcontrol.C11_feeder_regb transformer=C11_feeder_regb  winding=2 vreg=126.5  ptratio=60 band=2
+new regcontrol.C11_feeder_regc transformer=C11_feeder_regc  winding=2 vreg=126.5  ptratio=60 band=2

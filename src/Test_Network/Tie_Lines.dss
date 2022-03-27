@@ -1,0 +1,19 @@
+! Tie Switches*********************************
+! long Tie-line
+!New Line.Sw3       bus1=n1138604   bus2=m1069154         switch=y           R1=1     1   1        1     Length=0.001  enabled=True !A long Tie-Line
+! short Tie-Line
+!New Line.Sw1    phases=1  Bus1=l2990826.3   Bus2=l2841619.3 switch=y   r1=1e-3 r0=1e-3  x1=0.000 x0=0.000 c1=0.000 c0=0.000 Length=0.001
+
+! Tie-Line between circuit 9 and 10
+New Line.Sw1_C9C10       bus1=C9_m1027055   bus2=C10_m1026329         switch=y           R1=1     1   1        1     Length=0.001  enabled=True !A long Tie-Line
+
+! Tie-Line between circuit 7 and 8
+New Line.Sw1_C7C8       bus1=C7_m1027055   bus2=C8_m1026329         switch=y           R1=1     1   1        1     Length=0.001  enabled=True !A long Tie-Line
+
+! More Substations**********************************************************
+New Line.Sw2Source2      bus1=M1026329  bus2=Sourcebus2_1         switch=y           R1=1     1   1        1     Length=0.001
+!New Line.Sw3Source3      bus1=m1009650  bus2=Sourcebus3_1         switch=y           R1=1     1   1        1     Length=0.001
+
+New Line.LNSource2      bus1=Sourcebus2_1      bus2=Sourcebus2              R1=1     1   1        1            Length=0.001
+
+!New Line.LNSource3      bus1=Sourcebus3_1      bus2=Sourcebus3              R1=1     1   1        1            Length=0.001

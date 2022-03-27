@@ -1,0 +1,54 @@
+!this script is for connectiong all distribution networks for the main Line
+
+!High voltage line code
+!New Linecode.3ph_MainLine_highVoltage nphases=3  Units=km
+!~ Rmatrix=[0.214162  |0.0557957  0.212131  |0.0571636  0.0560892  0.214801  ]
+!~ Xmatrix=[0.634957  |0.27487  0.652375  |0.246528  0.29092  0.629544  ]
+!~ Cmatrix=[9.13606  |-2.66777  9.62226  |-2.17646  -3.15664  9.43197  ]
+
+!Old before Python coding
+!New Linecode.3ph_MainLine_highVoltage nphases=3  Units=km
+!~ Rmatrix=[0.214162  |0  0.212131  |0  0  0.214801  ]
+!~ Xmatrix=[0.634957  |0  0.652375  |0  0  0.629544  ]
+!~ Cmatrix=[9.13606  |0  9.62226  |0  0  9.43197  ]
+
+New Linecode.3ph_MainLine_highVoltage nphases=3  Units=km
+~ Rmatrix=[0.214162  |0  0.212131  |0  0  0.214801  ]
+~ Xmatrix=[0.634957  |0  0.652375  |0  0  0.629544  ]
+~ Cmatrix=[9.13606  |0  9.62226  |0  0  9.43197  ]
+
+! Put Source Impedance in as a Reactor
+New Reactor.HVMV_Sub_HSB  bus1=SourceBus  bus2=MasterNode_Reactor  r=0  x=(1.051 0.88 0.001 3 * - - 115 12.47 / sqr *) normamps=400  emergamps=400
+!One main line----------------------------------------------------
+!Make this line a switch
+New Line.SwMainLine          bus1=MasterNode_Reactor      bus2=MasterNode     length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+
+!New Line.MainLine1_Left      bus1=MasterNode      bus2=C2_C8_node     length=6.09599 units=km Linecode=3ph_MainLine_highVoltage
+!New Line.MainLine1_Right     bus1=MasterNode      bus2=C3_C9_node     length=6.09599 units=km Linecode=3ph_MainLine_highVoltage
+!New Line.MainLine2_Left      bus1=C2_C8_node      bus2=C1_C7_node     length=12.19199 units=km Linecode=3ph_MainLine_highVoltage
+!New Line.MainLine2_Right     bus1=C3_C9_node      bus2=C4_C10_node    length=12.19199 units=km Linecode=3ph_MainLine_highVoltage
+!New Line.MainLine3_Left      bus1=C1_C7_node      bus2=C0_C6_node     length=12.19199 units=km Linecode=3ph_MainLine_highVoltage
+!New Line.MainLine3_Right     bus1=C4_C10_node     bus2=C5_C11_node    length=12.19199 units=km Linecode=3ph_MainLine_highVoltage
+
+! The line length for sub-trasnmission is modified for restoration
+New Line.MainLine1_Left      bus1=MasterNode      bus2=C2_C8_node     length=0.01 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MainLine1_Right     bus1=MasterNode      bus2=C3_C9_node     length=0.01 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MainLine2_Left      bus1=C2_C8_node      bus2=C1_C7_node     length=0.01 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MainLine2_Right     bus1=C3_C9_node      bus2=C4_C10_node    length=0.01 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MainLine3_Left      bus1=C1_C7_node      bus2=C0_C6_node     length=0.01 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MainLine3_Right     bus1=C4_C10_node     bus2=C5_C11_node    length=0.01 units=km Linecode=3ph_MainLine_highVoltage
+
+
+!Branches from main line
+New Line.MasterLine_C0     bus1=C0_C6_node     bus2=MasterNode_C0    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C1     bus1=C1_C7_node     bus2=MasterNode_C1    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C2     bus1=C2_C8_node     bus2=MasterNode_C2    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C3     bus1=C3_C9_node     bus2=MasterNode_C3    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C4     bus1=C4_C10_node    bus2=MasterNode_C4    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C5     bus1=C5_C11_node    bus2=MasterNode_C5    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C6     bus1=C0_C6_node     bus2=MasterNode_C6    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C7     bus1=C1_C7_node     bus2=MasterNode_C7    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C8     bus1=C2_C8_node     bus2=MasterNode_C8    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C9     bus1=C3_C9_node     bus2=MasterNode_C9    length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C10    bus1=C4_C10_node    bus2=MasterNode_C10   length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage
+New Line.MasterLine_C11    bus1=C5_C11_node    bus2=MasterNode_C11   length=0.019436038 units=km Linecode=3ph_MainLine_highVoltage

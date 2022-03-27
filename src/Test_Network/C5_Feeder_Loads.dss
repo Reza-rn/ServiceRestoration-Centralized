@@ -1,0 +1,1 @@
+new load.C5_other_feeders  bus1=C5__cane_creek_ds_lsb.1.2.3  phases=3 kv=12.47 xfkva=15000 pf=0.95 allocationfactor=1 model=4 cvrwatts=0.8 cvrvars=3 yearly=load_res status=variable conn=wye 

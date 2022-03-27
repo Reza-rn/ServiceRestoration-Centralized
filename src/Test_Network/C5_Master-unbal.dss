@@ -1,0 +1,16 @@
+Clear
+New Circuit.IEEE8500u  
+~ pu=1.05  r1=0  x1=0.001  r0=0  x0=0.001  
+Redirect  LineCodes2.dss
+Redirect  Triplex_Linecodes.dss
+Redirect  C5_Lines.dss
+Redirect  C5_Transformers.dss
+Redirect  C5_LoadXfmrs.dss    ! Load Transformers
+Redirect  C5_Triplex_Lines.dss
+Redirect  C5_UnbalancedLoads.dss
+Redirect  C5_Capacitors.dss
+Redirect  C5_CapControls.dss
+Redirect  C5_Regulators.dss
+Set voltagebases=[115, 12.47,  0.48, 0.208]
+Calcvoltagebases     ! This also establishes the bus list
+Buscoords  C5_Buscoords.dss

@@ -1,0 +1,8 @@
+new "transformer.C3_g_m1125934"  xhl=5.75  kva=1000  conns=[wye, delta]
+~ wdg=1 bus=C3_190-7361.1.2.3.4  kv=12.47  
+~ wdg=2 bus=C3_g_190-7361        kv=0.48  
+new  reactor.C3_g_m1125934  phases=1  bus1=C3_190-7361.4  r=0.001  x=0  !neutral reactor/resistor
+new   "generator.C3_g_m1125934"  bus1=C3_g_190-7361  kw=1000  pf=1  kva=1000  kv=0.48  xdp=0.27  xdpp=0.2  h=2
+~ conn=delta   ! use the interconnection transformer to achieve wye for direct connect 
+new "monitor.C3_g_m1125934"      element="transformer.C3_g_m1125934"  terminal=1  mode=0
+new "monitor.C3_g_m1125934_gen"  element="generator.C3_g_m1125934"    terminal=1  mode=3

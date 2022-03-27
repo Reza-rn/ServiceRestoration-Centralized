@@ -1,0 +1,9 @@
+new capcontrol.C11_capbank2a_ctrl capacitor=C11_capbank2a element=line.C11_cap_1a  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=150 offsetting=-225 voltoverride=y vmin=7110 vmax=7740 delay=100 delayoff=100 
+new capcontrol.C11_capbank2b_ctrl capacitor=C11_capbank2b element=line.C11_cap_1b  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=150 offsetting=-225 voltoverride=y vmin=7110 vmax=7740 delay=101 delayoff=101
+new capcontrol.C11_capbank2c_ctrl capacitor=C11_capbank2c element=line.C11_cap_1c  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=150 offsetting=-225 voltoverride=y vmin=7110 vmax=7740 delay=102 delayoff=102
+new capcontrol.C11_capbank1a_ctrl capacitor=C11_capbank1a element=line.C11_cap_2a  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=150 offsetting=-225 voltoverride=y vmin=7110 vmax=7740 delay=100 delayoff=90
+new capcontrol.C11_capbank1b_ctrl capacitor=C11_capbank1b element=line.C11_cap_2b  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=150 offsetting=-225 voltoverride=y vmin=7110 vmax=7740 delay=101 delayoff=91
+new capcontrol.C11_capbank1c_ctrl capacitor=C11_capbank1c element=line.C11_cap_2c  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=150 offsetting=-225 voltoverride=y vmin=7110 vmax=7740 delay=102 delayoff=92
+new capcontrol.C11_capbank0a_ctrl capacitor=C11_capbank0a element=line.C11_cap_3a  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=200 offsetting=-300 voltoverride=y vmin=7110 vmax=7740 delay=100 delayoff=80
+new capcontrol.C11_capbank0b_ctrl capacitor=C11_capbank0b element=line.C11_cap_3b  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=200 offsetting=-300 voltoverride=y vmin=7110 vmax=7740 delay=101 delayoff=81
+new capcontrol.C11_capbank0c_ctrl capacitor=C11_capbank0c element=line.C11_cap_3c  terminal=1 type=kvar ptratio=1 ctratio=1 onsetting=200 offsetting=-300 voltoverride=y vmin=7110 vmax=7740 delay=102 delayoff=82

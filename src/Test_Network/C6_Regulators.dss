@@ -1,0 +1,18 @@
+new transformer.C6_vreg2_a phases=1  windings=2  buses=(C6_regxfmr_190-8593.1, C6_190-8593.1)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new transformer.C6_vreg2_b phases=1  windings=2  buses=(C6_regxfmr_190-8593.2, C6_190-8593.2)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new transformer.C6_vreg2_c phases=1  windings=2  buses=(C6_regxfmr_190-8593.3, C6_190-8593.3)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new regcontrol.C6_vreg2_a transformer=C6_vreg2_a  winding=2 vreg=125  ptratio=60 band=2  
+new regcontrol.C6_vreg2_b transformer=C6_vreg2_b  winding=2 vreg=125  ptratio=60 band=2  
+new regcontrol.C6_vreg2_c transformer=C6_vreg2_c  winding=2 vreg=125  ptratio=60 band=2  
+new transformer.C6_vreg3_a phases=1  windings=2  buses=(C6_regxfmr_190-8581.1, C6_190-8581.1)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new transformer.C6_vreg3_b phases=1  windings=2  buses=(C6_regxfmr_190-8581.2, C6_190-8581.2)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new transformer.C6_vreg3_c phases=1  windings=2  buses=(C6_regxfmr_190-8581.3, C6_190-8581.3)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new regcontrol.C6_vreg3_a transformer=C6_vreg3_a  winding=2 vreg=125  ptratio=60 band=2  
+new regcontrol.C6_vreg3_b transformer=C6_vreg3_b  winding=2 vreg=125  ptratio=60 band=2  
+new regcontrol.C6_vreg3_c transformer=C6_vreg3_c  winding=2 vreg=125  ptratio=60 band=2  
+new transformer.C6_vreg4_a phases=1  windings=2  buses=(C6_regxfmr_190-7361.1, C6_190-7361.1)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new transformer.C6_vreg4_b phases=1  windings=2  buses=(C6_regxfmr_190-7361.2, C6_190-7361.2)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new transformer.C6_vreg4_c phases=1  windings=2  buses=(C6_regxfmr_190-7361.3, C6_190-7361.3)  conns=(wye, wye)  kvs=(7.2, 7.2)  kvas=(10000, 10000)  xhl=0.1 %loadloss=.01 wdg=2 maxtap=1.1 mintap=0.9 ppm=0 
+new regcontrol.C6_vreg4_a transformer=C6_vreg4_a  winding=2 vreg=125  ptratio=60 band=2  
+new regcontrol.C6_vreg4_b transformer=C6_vreg4_b  winding=2 vreg=125  ptratio=60 band=2  
+new regcontrol.C6_vreg4_c transformer=C6_vreg4_c  winding=2 vreg=125  ptratio=60 band=2  
